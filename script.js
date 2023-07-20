@@ -90,3 +90,37 @@ const fruitsRouges = ["fraises","frambroises"];
 const fruitsVerts = ["pommes" , "poires"]
 const fruits = [...fruitsRouges,...fruitsVerts];
 console.log(fruits); 
+
+// destructuring Array.
+let numbers = [1,4,19]
+const [a,b] = numbers;
+const [...c] = numbers;  //parametre rest
+console.log(c);
+console.log(a);
+console.log(b);
+
+let d = 1 ;
+let e = 3;
+[d,e] = [e,d];
+console.log(d);
+console.log(e);
+// destructuring objects
+const myObject = {
+    Name : "jonh",
+    age : "34",
+    present : function(){
+        console.log("hello ! ");
+    }
+}
+const {Name , age,present} = myObject;
+console.log(Name);
+console.log(age);
+present();
+
+// si je veux donner un autre nom a mes variables au lieu de donner des meme noms que les proprietés du 1er objet
+// on les appellent des alias .
+const {Name:name1 , age:age1, present:hello} = myObject;
+console.log(name1);
+console.log(age1);
+hello();
+
